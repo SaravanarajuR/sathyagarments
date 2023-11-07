@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Navbar from "../templates/Nav/Nav.js";
 
 function Home(props) {
   const [offers, setOffer] = useState();
@@ -13,10 +14,8 @@ function Home(props) {
   useEffect(() => {
     dataFetch().then((res) => {
       res.json().then((data) => {
-        return () => {
-          setOffer(data);
-          setdata(true);
-        };
+        setdata(true);
+        setOffer(data);
       });
     });
   }, []);
@@ -26,9 +25,7 @@ function Home(props) {
         <h1>Loading</h1>
       ) : (
         <div>
-          {offers.map((k) => {
-            return <img src={k.url} alt="offer" />;
-          })}
+          <Navbar />
         </div>
       )}
     </div>

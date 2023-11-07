@@ -10,7 +10,7 @@ const styles = {
   signup: {
     alignItems: "center",
     justifyContent: "flex-start",
-    backgroundColor: "#808080",
+    backgroundColor: "#000",
     borderRadius: "10px",
     gap: "20px",
     width: "80%",
@@ -53,16 +53,20 @@ const styles = {
     "&:focus": {
       border: "2px solid white",
       outline: "none",
+      color: "rgba(255,255,255,0.7)",
       backgroundColor: "rgba(255,255,255,0.2)",
+      "&::placeholder": {
+        color: "rgba(255,255,255,0.7)",
+      },
     },
     "&::placeholder": {
       color: "rgba(0,0,0,0.6)",
     },
   },
   headText: {
-    color: "black",
+    color: "#808080",
     fontWeight: "900",
-    fontSize: "35px",
+    fontSize: "27px",
     fontFamily: "'Libre Baskerville', serif",
     userSelect: "none",
     margin: 0,
@@ -70,16 +74,16 @@ const styles = {
   btn: {
     width: "50%",
     height: "auto",
-    backgroundColor: "black",
+    backgroundColor: "#808080",
     padding: "10px 0",
     border: "none",
     fontSize: "16px",
     fontWeight: "800",
     borderRadius: "10px",
-    color: "rgba(255,255,255,0.5)",
+    color: "rgba(0,0,0,0.7)",
   },
   text: {
-    color: "black",
+    color: "#808080",
     alignSelf: "flex-end",
     marginRight: "18%",
     userSelect: "none",
