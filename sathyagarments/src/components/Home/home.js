@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
-import Navbar from "../templates/Nav/Nav.js";
+import Navbar from "../tools/Nav/Navbar.js";
+import { withStyles } from "@material-ui/styles";
+import style from "./style.js";
 
 function Home(props) {
+  const { classes } = props;
   const [offers, setOffer] = useState();
   const [data, setdata] = useState(false);
   function dataFetch() {
@@ -20,16 +23,8 @@ function Home(props) {
     });
   }, []);
   return (
-    <div>
-      {!data ? (
-        <h1>Loading</h1>
-      ) : (
-        <div>
-          <Navbar />
-        </div>
-      )}
-    </div>
+    <div className={classes.home}>{!data ? <h1>Loading</h1> : <Navbar />}</div>
   );
 }
 
-export default Home;
+export default withStyles(style)(Home);
