@@ -23,7 +23,27 @@ function Home(props) {
     });
   }, []);
   return (
-    <div className={classes.home}>{!data ? <h1>Loading</h1> : <Navbar />}</div>
+    <div className={classes.home}>
+      {!data ? (
+        <h1>Loading</h1>
+      ) : (
+        <div>
+          <Navbar />
+          <div className={classes.carousel}>
+            <img
+              className={`${classes.carouselImg} ${classes.active}`}
+              src="https://images.pexels.com/photos/236748/pexels-photo-236748.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="img"
+            />
+            <img
+              className={`${classes.carouselImg} ${classes.hidden}`}
+              src="https://images.pexels.com/photos/3709399/pexels-photo-3709399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="img"
+            />
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
 

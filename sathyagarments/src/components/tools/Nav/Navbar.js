@@ -10,16 +10,16 @@ function Nav(props) {
         <span className={classes.span}>Sathya </span>Garments
       </p>
       <div className={classes.linkdiv}>
-        <Link to="/about" className={classes.links}>
-          About Us
-        </Link>
-        <span className={classes.span}>|</span>
         <Link to="/products" className={classes.links}>
           Our Products
         </Link>
         <span className={classes.span}>|</span>
         <Link to="/offers" className={classes.links}>
           Offers
+        </Link>
+        <span className={classes.span}>|</span>
+        <Link to="/about" className={classes.links}>
+          About Us
         </Link>
         <span className={classes.span}>|</span>
       </div>
