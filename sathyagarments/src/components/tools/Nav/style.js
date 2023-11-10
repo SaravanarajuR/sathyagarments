@@ -1,11 +1,14 @@
 const style = {
   nav: {
-    backgroundColor: "black",
+    backgroundColor: "white",
     height: "7%",
-    width: "100%",
+    width: "100vw",
+    zIndex: 20,
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+    padding: "10px 0",
+    boxShadow: "5px 5px 5px rgba(0,0,0,0.5)",
   },
   name: {
     color: "#808080",
@@ -25,11 +28,12 @@ const style = {
     justifyContent: "flex-end",
   },
   span: {
-    color: "white",
+    color: "black",
   },
   links: {
     flexShrink: "0",
     fontWeight: "700",
+    textDecoration: "none",
     color: "#808080",
   },
 };
