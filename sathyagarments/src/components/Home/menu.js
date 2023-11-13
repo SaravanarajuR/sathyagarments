@@ -1,4 +1,4 @@
-import menuIcon from "../tools/roundMenu/menuIcon";
+import { v4 } from "uuid";
 import { useEffect, useState } from "react";
 import categories from "../../images/categories";
 import { withStyles } from "@material-ui/styles";
@@ -23,10 +23,11 @@ function Menu(props) {
     }
   }, []);
 
+  console.log(image);
   return (
     <div className={classes.menuDiv}>
       {image.map((k) => {
-        return <RoundMenu src={k} />;
+        return <RoundMenu key={v4()} url={k} />;
       })}
     </div>
   );

@@ -10,10 +10,9 @@ function map(props) {
       width="40%"
       height="90%"
       style={{ border: 0 }}
-      allowfullscreen=""
       loading="lazy"
       title="map"
-      referrerpolicy="no-referrer-when-downgrade"
+      referrerPolicy="no-referrer-when-downgrade"
     ></iframe>
   );
 }
